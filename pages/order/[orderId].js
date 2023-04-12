@@ -53,6 +53,7 @@ function OrderId() {
     psc,
     totalAmt,
     isPaid,
+    paidAt,
     isDelivered,
     deliveredAt,
   } = order;
@@ -64,7 +65,6 @@ function OrderId() {
       if (data.message) {
         toast.success(data.message);
       }
-      console.log("data", data);
     } catch (error) {
       console.log("verifypay error:", error);
     }
@@ -88,6 +88,7 @@ function OrderId() {
         // hit merchant api for initiating verfication
         verifypay(orderId);
         toast.success("Amount Success fully Paid");
+        location.reload();
         console.log("response", payload);
       },
       onError(error) {

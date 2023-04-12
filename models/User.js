@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
       unique: true,
     },
     password: { type: String, required: true },
-    isAdmin: { type: Boolean, required: true, default: false },
+    role: { type: String, required: true, default: "client" },
   },
   {
     timestamps: true,

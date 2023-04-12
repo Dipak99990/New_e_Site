@@ -29,6 +29,7 @@ function Auth({ children }) {
   if (status === "loading") {
     return <h1>Loading...</h1>;
   }
+
   return children;
 }
 export default App;

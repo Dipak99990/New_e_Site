@@ -31,7 +31,7 @@ function Layout({ title, children }) {
       <ToastContainer position="bottom-center" limit={1} />
       <div className="flex flex-col justify-between h-screen">
         <header>
-          <nav className="flex items-center justify-between h-12 px-4 shadow-md">
+          <nav className="flex items-center justify-between h-15 px-4 shadow-md">
             <div className="flex">
               <Link href="/">
                 <span className="font-bold text-2xl">
@@ -48,7 +48,7 @@ function Layout({ title, children }) {
                         {newAmount}
                       </span>
                       <span className="p-2">
-                        <ShoppingCartIcon className="w-8 h-8" />
+                        <ShoppingCartIcon className="w-8 h-8 " />
                       </span>
                     </span>
                   ) : (
@@ -76,12 +76,6 @@ function Layout({ title, children }) {
 
                           <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white shadow-lg">
                             <Menu.Item as="div">
-                              <DropdownLink
-                                className="dropdown-link"
-                                href="/profile"
-                              >
-                                Profile
-                              </DropdownLink>
                               <DropdownLink
                                 className="dropdown-link"
                                 href="/order-history"
