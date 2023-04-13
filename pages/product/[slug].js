@@ -76,13 +76,26 @@ function ProductScreen(props) {
           >
             <ul>
               <li>
-                <h1 className="text-lg">{product.name}</h1>
+                <h1 className="text-xl font-semibold">{product.name}</h1>
               </li>
-              <li>Category:{product.category}</li>
-              <li>Brand:{product.brand}</li>
+              <li>
+                <span className="font-medium">Category: </span>
+                {product.category}
+              </li>
 
               <li>
-                {product.rating} of {product.numReview} reviews
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <span
+                      key={i}
+                      className={`text-2xl mr-1 ${
+                        i < product.rating ? "text-yellow-400" : "text-gray-400"
+                      }`}
+                    >
+                      &#9733;
+                    </span>
+                  ))}
+                </div>
               </li>
               <li>{product.description}</li>
             </ul>
