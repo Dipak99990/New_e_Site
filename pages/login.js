@@ -15,6 +15,7 @@ export default function LoginScreen() {
 
   useEffect(() => {
     if (session?.user) {
+      console.log("user authenticated");
       router.push(redirect || "/");
     }
   }, [router, session, redirect]);

@@ -9,7 +9,8 @@ import DropdownLink from "./DropdownLink";
 import { useState, useEffect } from "react";
 import { cartReset } from "@/features/cartSLice";
 import { ShoppingCartIcon } from "@heroicons/react/solid";
-function Layout({ title, children }) {
+import SearchPage from "./SearchPage";
+function Layout({ title, children, products, searchTerm, handleSearchChange }) {
   const { data: session, status } = useSession();
   const dispatch = useDispatch();
   const { amount } = useSelector((store) => store.cart);
@@ -29,9 +30,9 @@ function Layout({ title, children }) {
         <meta name="description" content="E commerce website" />
       </Head>
       <ToastContainer position="bottom-center" limit={1} />
-      <div className="flex flex-col justify-between h-screen">
+      <div className="flex flex-col justify-between h-screen w-screen">
         <header>
-          <nav className="flex items-center justify-between h-15 px-4 shadow-md">
+          <nav className="flex items-center justify-between h-15 w-full ">
             <div className="flex">
               <Link href="/">
                 <span className="font-bold text-2xl">
@@ -39,7 +40,13 @@ function Layout({ title, children }) {
                 </span>
               </Link>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center sm:flex-row sm:justify-end ">
+              <div className="sm:mr-3">
+                <SearchPage
+                  searchTerm={searchTerm}
+                  handleSearchChange={handleSearchChange}
+                />
+              </div>
               <div className="flex items-center">
                 <Link href="/cart">
                   {newAmount > 0 ? (
