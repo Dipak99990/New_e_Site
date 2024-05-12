@@ -8,8 +8,9 @@ async function connect() {
   }
 
   await mongoose.connect(
-    "mongodb+srv://dpksrm:123@e-site.wfbudmw.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://dpksrm:123@e-site.wfbudmw.mongodb.net/?retryWrites=true&w=majority&appName=E-site"
   );
+  
   connection.isConnected = true;
 }
 

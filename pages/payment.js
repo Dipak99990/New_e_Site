@@ -46,7 +46,7 @@ function Payment() {
       <CheckoutWizard activeStep={2} />
       <form className="mx-auto max-w-screen-md" onSubmit={handleSubmit}>
         <h1 className="mb-4 text-xl">Payment Method</h1>
-        {["Esewa", "CashOnDelivery"].map((payment) => {
+        {["Khalti", "CashOnDelivery"].map((payment) => {
           return (
             <div key={payment} className="mb-4">
               <input

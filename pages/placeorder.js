@@ -115,25 +115,25 @@ function PlaceOrder() {
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Items Total</div>
-                    <div>${Amt}</div>
+                    <div>Rs{Amt}</div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Tax Amount</div>
-                    <div>${txAmt}</div>
+                    <div>Rs{txAmt}</div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Shipping Cost</div>
-                    <div>${psc}</div>
+                    <div>Rs{psc}</div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between primary-button">
                     <div>Total</div>
-                    <div>${totalAmt}</div>
+                    <div>Rs{totalAmt}</div>
                   </div>
                 </li>
                 <li>

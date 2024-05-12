@@ -94,7 +94,7 @@ function CartScreen() {
                       </td>
                       <td className="p-5 text-right">{item.quantity}</td>
                       <td className="p-5 text-right">
-                        {product && `$${product.price * item.quantity}`}
+                        {product && `Rs${product.price * item.quantity}`}
                       </td>
                       <td className="p-5 text-center">
                         <button
@@ -115,7 +115,7 @@ function CartScreen() {
           <div className="card p-5">
             <ul>
               <li>
-                <div className="pb-3 text-xl">subtotal</div>${subtotal}
+                <div className="pb-3 text-xl">subtotal</div>Rs{subtotal}
               </li>
               <li>
                 <button

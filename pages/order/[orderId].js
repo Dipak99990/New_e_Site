@@ -165,9 +165,9 @@ function OrderId() {
                         </Link>
                       </td>
                       <td className=" p-5 text-right">{item.quantity}</td>
-                      <td className="p-5 text-right">${item.price}</td>
+                      <td className="p-5 text-right">Rs{item.price}</td>
                       <td className="p-5 text-right">
-                        ${item.quantity * item.price}
+                        Rs{item.quantity * item.price}
                       </td>
                     </tr>
                   ))}
@@ -181,25 +181,25 @@ function OrderId() {
               <li>
                 <div className="mb-2 flex justify-between">
                   <div>Items</div>
-                  <div>${Amt}</div>
+                  <div>Rs{Amt}</div>
                 </div>
               </li>
               <li>
                 <div className="mb-2 flex justify-between">
                   <div>Tax Price</div>
-                  <div>${txAmt}</div>
+                  <div>Rs{txAmt}</div>
                 </div>
               </li>
               <li>
                 <div className="mb-2 flex justify-between">
                   <div>Shipping Price</div>
-                  <div>${psc}</div>
+                  <div>Rs{psc}</div>
                 </div>
               </li>
               <li>
                 <div className="mb-2 flex justify-between">
                   <div>Total Price</div>
-                  <div>${totalAmt}</div>
+                  <div>Rs{totalAmt}</div>
                 </div>
               </li>
               <li>
