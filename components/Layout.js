@@ -32,7 +32,7 @@ function Layout({ title, children, products, searchTerm, handleSearchChange }) {
       <ToastContainer position="bottom-center" limit={1} />
       <div className="flex flex-col justify-between h-screen w-screen">
         <header>
-          <nav className="flex items-center justify-evenly h-15 w-full overflow-hidden flex-wrap">
+          <nav className="flex items-center justify-evenly h-15 w-full flex-wrap">
             <div className="flex">
               <Link href="/">
                 <span className="font-bold text-2xl">
